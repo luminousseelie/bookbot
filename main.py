@@ -18,6 +18,9 @@ def report_symbols(dict):
     keys = list(dict.keys())
     values = list(dict.values())
     for i in range(len(keys) - 1):
-        print("The letter '" + keys[i] + "' was found " + str(values[i]) + " times.")
+        if keys[i] in "qwertyuiopasdfghjklzxcbvnm":
+            print("The letter '" + keys[i] + "' was found " + str(values[i]) + " times.")
+        else:
+            pass
 
 main()
