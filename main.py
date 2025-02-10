@@ -1,8 +1,13 @@
 def main():
     book_path = "books/frankenstein.txt"
     text = str(get_book_text(book_path)).lower()
+    words = count_words(text)
     symbol_no = count_symbols(text)
     report_symbols(symbol_no)
+
+def count_words(string):
+    words = string.split()
+    return len(words)
 
 def get_book_text(path):
     with open(path) as f:
